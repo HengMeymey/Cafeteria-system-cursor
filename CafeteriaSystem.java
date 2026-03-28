@@ -257,9 +257,6 @@ public class CafeteriaSystem {
             double total = 0.0;
             for (Map.Entry<String, Integer> e : items.entrySet()) {
                 MenuItem m = menu.get(e.getKey());
-                if (m == null) {
-                    throw new IllegalArgumentException("Unknown item in order: " + e.getKey());
-                }
                 int q = e.getValue();
                 if (q <= 0) {
                     throw new IllegalArgumentException("Invalid quantity for " + e.getKey());
